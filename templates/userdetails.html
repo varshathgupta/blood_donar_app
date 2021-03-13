@@ -1,0 +1,76 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>
+  Welcome, {{ user.name }}!
+</h1>
+<div>
+  <table class="table table-hover" style="width: 700px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        {% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>
+  Welcome, {{ user.name }}!
+</h1>
+<div>
+  <table class="table table-hover" style="width: 700px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Date Applied</th>
+        <th scope="col">Age</th>
+        <th scope="col">Blood Group</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Heigth</th>
+        <th scope="col">Weigth</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Adress</th>
+        <th scope="col">Availabilty</th>
+        <th scope="col">Last Donation</th>
+        <th scope="col">Degree</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for workout in workouts %}
+      <tr>
+        <td>{{ userd.name }}</td>
+        <td>{{ userd.date_posted.strftime('%m/%d/%Y') }}</td>
+        <td>{{ userd.age }}</td>
+        <td>{{ userd.bg }}</td>
+        <td>{{ userd.gender }}</td>
+        <td>{{ userd.height }}</td>
+        <td>{{ userd.weight }}</td>
+        <td>{{ userd.phone }}</td>
+        <td>{{ userd.address }}</td>
+        <td>{{ userd.availablity }}</td>
+        <td>{{ userd.lastdonation }}</td>
+        <td>{{ userd.degree }}</td>
+          <a href="#" class="btn btn-outline-primary" role="button">
+            Edit
+          </a>
+        </td>
+        <td>
+          <a href="#" class="btn btn-outline-danger" role="button">
+            Delete
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+     

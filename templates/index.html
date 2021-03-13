@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+
+
+<center>
+  <img
+    src="{{ url_for('static', filename='images/bld.png') }}"
+    alt="Blooddonar"
+    height="200px"
+  />
+</center>
+<h1 style='text-align: center; font-size: 40px;'>Hello Donars !</h1>
+<p style='text-align: center; font-size: 20px;'>
+  Welcome to Blood donar app! <br />This website is used for tracking blood donars inside campus.
+</p>
+
+{% endblock %}
