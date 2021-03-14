@@ -3,6 +3,7 @@ from .models import User
 from .models import Userd
 from flask import Blueprint, render_template, redirect, url_for, request, flash, abort
 from flask_login import current_user, login_required
+from datetime import datetime
 
 main = Blueprint('main', __name__)
 
@@ -40,10 +41,13 @@ def new_user_post():
     degree = request.form.get('degree')
     
     userd = Userd(name=name,age=age,bg=bg,gender=gender,height=height,weight=weight,
-    phone=phone,address=address,availablity=availablity,lastdonation=lastdonation,
+    phone=phone,address=address,availablity=availablity,
+    lastdonation=datetime.strptime(lastdonation, "%Y-%m-%d").date(),
     degree=degree ,author=current_user)
     db.session.add(userd)
     db.session.commit()
+    #teacher.birthday = datetime.strptime(birthday, "%Y-%m-%d").date()
+
 
     flash('Your details has been added!')
 
