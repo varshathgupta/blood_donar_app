@@ -5,24 +5,27 @@
 />
 {% endblock %} {% block content %}
 <h1>
-  Welcome, {{ user.name }}!
+  Welcome,{{ name }}
 </h1>
-<div>
+<!--div>
   <table class="table table-hover" style="width: 700px;">
     <thead class="thead-dark">
       <tr>
         <th scope="col"></th>
         <th scope="col"></th>
         <th scope="col"></th>
-        {% extends "base.html" %} {% block head %} {{ super() }}
+ </tr>
+</thead>
+</table>
+</div-->       
 <link
   rel="stylesheet"
   href="{{ url_for('static', filename= 'extended_beauty.css') }}"
 />
-{% endblock %} {% block content %}
-<h1>
-  Welcome, {{ user.name }}!
-</h1>
+
+<!--h1>
+  Welcome,{{ name }}!
+</h1 -->
 <div>
   <table class="table table-hover" style="width: 700px;">
     <thead class="thead-dark">
@@ -44,7 +47,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for workout in workouts %}
+      {% for userd in usersd %}
       <tr>
         <td>{{ userd.name }}</td>
         <td>{{ userd.date_posted.strftime('%m/%d/%Y') }}</td>

@@ -14,7 +14,7 @@ class User(db.Model, UserMixin):
 class Userd(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
-    #date_posted = db.Column(db.DateTime, nullable=False, default=datetime.now)
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.now)
     age = db.Column(db.Integer, nullable=False)
     bg = db.Column(db.String, nullable=False)
     gender = db.Column(db.String, nullable=False)

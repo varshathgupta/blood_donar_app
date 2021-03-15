@@ -53,6 +53,12 @@ def new_user_post():
 
     return redirect(url_for('main.user_workouts'))
 
+@main.route('/donating')
+@login_required
+def donating():
+    return render_template('userdetails.html')
+
+
 
 @main.route('/all')
 @login_required
