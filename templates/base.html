@@ -77,7 +77,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           {% if current_user.is_authenticated %}
-          <a href="{{ url_for('main.user_workouts') }}" class="btn btn-outline-primary" role="button"
+          <a href="{{ url_for('main.donating') }}" class="btn btn-outline-primary" role="button"
             >Donating</a
           >
           {% endif %} {% if not current_user.is_authenticated %}
